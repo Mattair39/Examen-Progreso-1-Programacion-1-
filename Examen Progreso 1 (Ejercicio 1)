@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
+
+int coordenadax1;
+int coordenadax2;
+int coordenadax3;
+int coordenaday1;
+int coordenaday2;
+int coordenaday3;
+int baricentrox;
+int baricentroy;
+float distancia1;
+float distancia2;
+float distancia3;
+
+int main()
+{
+    printf("Ingrese la primera coordenada en X: \n");
+    scanf("%d",&coordenadax1);
+    printf("Ingrese la primera coordenada en Y: \n");
+    scanf("%d",&coordenaday1);
+    printf("Ingrese la segunda coordenada en X: \n");
+    scanf("%d",&coordenadax2);
+    printf("Ingrese la segunda coordenada en Y: \n");
+    scanf("%d",&coordenaday2);
+    printf("Ingrese la tercera coordenada en X: \n");
+    scanf("%d",&coordenadax3);
+    printf("Ingrese la tercera coordenada en Y: \n");
+    scanf("%d",&coordenaday3);
+    
+    baricentrox=(coordenadax1+coordenadax2+coordenadax3)/3;
+    baricentroy=(coordenaday1+coordenaday2+coordenaday3)/3;
+    
+    distancia1=sqrt(pow((coordenadax2-coordenadax1),2)-pow((coordenaday2-coordenaday1),2));
+    distancia2=sqrt(pow((coordenadax3-coordenadax2),2)-pow((coordenaday3-coordenaday2),2));
+    distancia3=sqrt(pow((coordenadax3-coordenadax1),2)-pow((coordenaday3-coordenaday1),2));
+    
+    printf("La distancia entre el punto 1 y punto 2 es: %f \n", distancia1);
+    printf("La distancia entre el punto 2 y punto 3 es: %f \n", distancia2);
+    printf("La distancia entre el punto 3 y el punto 1 es: %f \n", distancia3);
+    printf("El primer par ordenado es: %d",coordenadax1);
+    printf("El baricentro es: \n");
+}
+    
+
+
